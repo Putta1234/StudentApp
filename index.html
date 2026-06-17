@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div class="login-container" id="loginPage">
+
+        <div class="login-card">
+
+            <!-- Student Logo -->
+
+            <div class="student-logo">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+                    alt="Student">
+
+            </div>
+
+            <h1>Student Login</h1>
+
+            <p>Sign in using your Google Account</p>
+
+            <!-- Google Login Configuration -->
+
+            <div id="g_id_onload"
+                data-client_id="1009844198505-rh8m8oma7vi4p7bk29lg4scmgl6tnqc8.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+
+            </div>
+
+            <!-- Google Sign In Button -->
+
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="pill"
+                data-theme="filled_blue"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left"
+                data-width="300">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= HOME PAGE ================= -->
+
+    <div class="home-page" id="homePage">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div class="logo">
+
+                Student Portal
+
+            </div>
+
+            <div class="profile-section">
+
+                <img id="profilePic" src="" alt="Profile">
+
+                <div class="profile-info">
+
+                    <h3 id="userName"></h3>
+
+                    <p id="userEmail"></p>
+
+                </div>
+
+                <button class="logout-btn" onclick="logout()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Welcome Section -->
+
+        <div class="welcome-container">
+
+            <h1>WELCOME BUDDY 🎉</h1>
+
+            <h2 id="welcomeText"></h2>
+
+            <p>
+
+                Successfully Logged in with Google Account
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
